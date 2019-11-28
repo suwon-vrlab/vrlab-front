@@ -6,7 +6,7 @@
 
 ## AdminLoginPage
 
-> http://vrlab.run.goorm.io/adminlogin
+> http://vrlab.run.goorm.io/account/admin
 
 관리자 로그인 페이지
 
@@ -42,7 +42,7 @@
 
 ## LoginPage
 
-> http://vrlab.run.goorm.io/login
+> http://vrlab.run.goorm.io/account/login
 
 랩원 로그인 페이지
 
@@ -54,6 +54,6 @@
 
 ## RegisterPage
 
-> http://vrlab.run.goorm.io/register
+> http://vrlab.run.goorm.io/account/register
 
 랩실 회원가입 페이지
