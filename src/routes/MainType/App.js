@@ -1,6 +1,5 @@
 // Themes
-import LoginPage from './LoginPage/index';
-import RegisterPage from './RegisterPage/index';
+
 import AdminAccountPage from './AdminAccountPage/index';
 import ContactPage from './ContactPage/index';
 import AdvisorPage from './AdvisorPage/index';
@@ -26,13 +25,11 @@ const App = ({history}) => {
             loginMode={loginMode}
             />
             <Route path={'/'} component={MainPage}/>
-            <Route path={'/login'} component={LoginPage}/>
-            <Route path={'/register/'} component={RegisterPage}/>
             <Route path={'/admin'} component={AdminAccountPage}/>
             <Route path={'/advisor'} component={AdvisorPage}/>
+            <Route path={'/board'} component={BoardPage}/>
             <Route path={'/introduction/'} component={IntroductionPage}/>
             <Route path={'/contact'} component={ContactPage}/>
-            <Route path={'/board'} component={BoardPage}/>
             <Route path={'/data'} component={DataPage}/>
         </React.Fragment>
     )
