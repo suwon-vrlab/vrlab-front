@@ -29,6 +29,7 @@ import NotificationsIcon from '@material-ui/icons/NotificationsOutlined'
 import InputIcon from '@material-ui/icons/Input'
 import MenuIcon from '@material-ui/icons/Menu'
 import SearchIcon from '@material-ui/icons/Search'
+import {Navbar, Nav, Form, FormControl} from "reactstrap";
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -132,42 +133,18 @@ const TopBar = ({ history, loginMode }) => {
 
   return (
     <Router>
-      <AppBar color={'primary'} position='static'>
-        <Toolbar>
-          <Typography variant='h6'>
-          <Button onClick={goToHome} color='inherit'>
-                  VR Lab
-              </Button>
-          </Typography>
-
-          <ListItem component='div'>
-            <ListItemText inset>
-              <Typography color='inherit' variant='title'>
-                <Button onClick={goToIntroduction} color='inherit'>
-                  Introduction
-                </Button>
-              </Typography>
-            </ListItemText>
-
-            <ListItemText inset>
-              <Typography color='inherit' variant='title'>
-                <Button onClick={goToAdvisor} color='inherit'>
-                  Advisor
-                </Button>
-              </Typography>
-            </ListItemText>
-
-            <ListItemText inset>
-              <Typography color='inherit' variant='title'>
-                <Button onClick={goToContact} color='inherit'>
-                  Contact
-                </Button>
-              </Typography>
-            </ListItemText>
-            {caseTopBar()}
-          </ListItem>
-        </Toolbar>
-      </AppBar>
+      <Navbar bg="primary" variant="dark">
+    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
+    <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-light">Search</Button>
+    </Form>
+  </Navbar>
     </Router>
   )
 }
